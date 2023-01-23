@@ -1,0 +1,20 @@
+---
+const resp = await fetch('https://jsonplaceholder.typicode.com/posts');
+const posts = await resp.json();
+console.log(posts);
+
+---
+
+<h1>
+  Mis publicaciones
+</h1>
+
+{
+  posts.map( (post: any) => (
+    <div>
+      <h5>{post.userId}</h5>
+      <h3>{ post.title }</h3>
+      <p>{ post.body }</p>
+    </div>
+  ))
+}
