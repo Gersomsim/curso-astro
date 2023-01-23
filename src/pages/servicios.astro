@@ -1,16 +1,20 @@
 ---
-import Card from "../components/Card.astro"
+import Layout from "../layouts/Layout.astro";
+import Card from "../components/Card.astro";
 ---
 
-<h1>
-  Servicios
-</h1>
-<p>
-  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Assumenda, dolorem itaque laudantium maiores fuga doloremque natus cum facilis aliquam tempora?
-</p>
+<Layout
+  Pagedescription="Description of my site for services"
+  pageTitle='Servicios'>
+	<h1>Servicios</h1>
+	<p>
+		Lorem ipsum dolor sit amet, consectetur adipisicing elit. Assumenda, dolorem
+		itaque laudantium maiores fuga doloremque natus cum facilis aliquam tempora?
+	</p>
 
-<Card title="Hola mundo" content="Esto es una prueba"/>
-<Card title="Programacion" content="programacion profecional"/>
-<Card title="Asistencia" content="Asistencia puntual"/>
+	<Card title="Hola mundo" content="Esto es una prueba" />
+	<Card title="Programacion" content="programacion funcional" />
+	<Card title="Asistencia" content="Asistencia puntual" />
 
-<Card />
+	<Card />
+</Layout>

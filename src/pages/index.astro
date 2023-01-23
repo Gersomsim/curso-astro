@@ -1,47 +1,12 @@
 ---
-const title = "Mi proyecto en Astro";
-const color = "danger";
-
-const hobbies = ['read', 'Write', 'watch'];
-
-const isActive = false;
+import Layout from "../layouts/Layout.astro";
 ---
+<Layout>
+	<h1>
+		Pagina inicial
+	</h1>
 
-<h1 class={color}>
-	{title}
-</h1>
-
-<h3>
-	Mis  hobbies
-</h3>
-<ul>
-	{
-		hobbies.map( hobbie => {
-			return <li>
-				<h3>
-					{hobbie}
-				</h3>
-				<button>Like</button>
-			</li>
-		})
-	}
-</ul>
-
-<h3>
-	{ isActive
-			? "El usuario esta activo"
-			: "El usuario esta inactivo"
-	}
-</h3>
-
-<script>
-	console.log('hola mundo');
-</script>
-<style>
-	.title {
-		color: skyblue;
-	}
-	.danger{
-		color: red;
-	}
-</style>
+	<p>
+		Bienvenido a mi blog
+	</p>
+</Layout>
