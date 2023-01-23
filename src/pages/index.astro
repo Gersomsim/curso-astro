@@ -3,6 +3,8 @@ const title = "Mi proyecto en Astro";
 const color = "danger";
 
 const hobbies = ['read', 'Write', 'watch'];
+
+const isActive = false;
 ---
 
 <h1 class={color}>
@@ -24,6 +26,13 @@ const hobbies = ['read', 'Write', 'watch'];
 		})
 	}
 </ul>
+
+<h3>
+	{ isActive
+			? "El usuario esta activo"
+			: "El usuario esta inactivo"
+	}
+</h3>
 
 <script>
 	console.log('hola mundo');
