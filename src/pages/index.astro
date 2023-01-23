@@ -1,11 +1,29 @@
 ---
-console.log("Astro project");
+const title = "Mi proyecto en Astro";
+const color = "danger";
 
+const hobbies = ['read', 'Write', 'watch'];
 ---
 
-<h1 class="title">
-	hola mundo
+<h1 class={color}>
+	{title}
 </h1>
+
+<h3>
+	Mis  hobbies
+</h3>
+<ul>
+	{
+		hobbies.map( hobbie => {
+			return <li>
+				<h3>
+					{hobbie}
+				</h3>
+				<button>Like</button>
+			</li>
+		})
+	}
+</ul>
 
 <script>
 	console.log('hola mundo');
@@ -13,5 +31,8 @@ console.log("Astro project");
 <style>
 	.title {
 		color: skyblue;
+	}
+	.danger{
+		color: red;
 	}
 </style>
