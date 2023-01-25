@@ -1,7 +1,7 @@
 ---
 import layout from '../../layouts/Layout.astro'
 const posts = await Astro.glob('./posts/*.md');
-
+import ardilla from '../../images/ardilla.jpg';
 ---
 
 <layout>
@@ -9,6 +9,8 @@ const posts = await Astro.glob('./posts/*.md');
 <h1>
   Blog
 </h1>
+<img width="300"
+  src={ardilla} alt="">
 {
   posts.map( post => {
     return <a href={post.url}>{post.frontmatter.titulo}</a>;
