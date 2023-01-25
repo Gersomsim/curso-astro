@@ -1,5 +1,7 @@
 ---
 import layout from '../../layouts/Layout.astro'
+const posts = await Astro.glob('./posts/*.md');
+
 ---
 
 <layout>
@@ -7,7 +9,20 @@ import layout from '../../layouts/Layout.astro'
 <h1>
   Blog
 </h1>
-<a href="/blog/notas">Mis notas</a> <br>
-<a href="/blog/tutorial-de-astro.md">Tutorial </a>
+{
+  posts.map( post => {
+    return <a href={post.url}>{post.frontmatter.titulo}</a>;
+  })
+}
 
 </layout>
+
+<style>
+  a{
+    background-color: wheat;
+    color: black;
+    text-decoration: none;
+    display: block;
+    margin-bottom: 4px;
+  }
+</style>
